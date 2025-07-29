@@ -8,10 +8,20 @@ This includes of the following resources:
 - Network interface
 - Virtual machine with
 - Network security group
+- Public IP address
+
+## OS and Middleware
+
+- Linux (Ubuntu)
+- Apache
+- MySQL
+- PHP
+
+This includes of the following resources:
 
 ## SystemConfiguration
 
--
+- ![SystemConfiguration](/img/SystemConfiguration.svg)
 
 ## Instructions
 
@@ -34,7 +44,7 @@ az group create --name <your resource group name> --location <location>
 # az group create --name rg-diary-dev --location japaneast
 ```
 
-4. To Deploy Azure resources, Run the following command.
+4. To Deploy Azure resources, Run the following command.<br>
    ※There should be main.bicep and cloud-init.txt in the current directory.
 
 ```bash:bash
@@ -62,7 +72,7 @@ sudo vim /var/www/html/diary-app/config.php
 sudo systemctl restart apache2
 ```
 
-7 . Enter http://<publicIPAddress>/diary-app in your browser.
+7 . Enter http://publicIPAddress/diary-app in your browser.
 
 ## Notes
 
