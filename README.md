@@ -45,13 +45,24 @@ az deployment group create --template-file main.bicep --resource-group <your res
 
 5. Upload diary-app.tar.gz to Azure VM.
 
-6. After logging into the virtual machine, Run the following command.
+6. After login into the virtual machine, Run the following command.
 
 ```bash:bash
 sudo tar -xzvf ~/diary-app.tar.gz -C /var/www/html/
 
 sudo mysql -u root
+
+# MySQL
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '<your password>';
+FLUSH PRIVILEGES;
+exit
+
+sudo vim /var/www/html/diary-app/config.php
+
+sudo systemctl restart apache2
 ```
+
+7 . Enter http://<publicIPAddress>/diary-app in your browser.
 
 ## Notes
 
