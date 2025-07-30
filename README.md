@@ -21,7 +21,22 @@ This includes of the following resources:
 
 ## SystemConfiguration
 
-- ![SystemConfiguration](/img/SystemConfiguration.svg)
+![SystemConfiguration](/img/SystemConfiguration.svg)
+
+```
+/var/www/html/diary-app/
+├── index.php              # 投稿一覧ページ
+├── config.php             # DB接続設定
+├── db/init.sql            # データベース初期化SQL
+├── css/style.css          # スタイル
+├── entries/               # 投稿の作成・編集・削除
+│   ├── create.php
+│   ├── edit.php
+│   └── delete.php
+└── templates/             # ヘッダー・フッター共通部品
+    ├── header.php
+    └── footer.php
+```
 
 ## Instructions
 
